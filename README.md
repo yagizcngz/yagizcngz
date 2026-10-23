@@ -3,7 +3,7 @@
   <img src="assets/header-light.svg" width="100%" alt="Yağız Cengiz. A pixel art knight resting by a campfire next to a sleeping dragon and a slime." />
 </picture>
 
-I study computer engineering at Manisa Celal Bayar University. I mostly build web backends in C# and .NET, and lately I've been experimenting with LLM agents.
+I study computer engineering at Manisa Celal Bayar University. I build full-stack web apps with .NET and React, and I enjoy getting involved in projects beyond the web, from AI tools to robotics and research.
 
 ### Now
 
