@@ -30,6 +30,9 @@ I study computer engineering at Manisa Celal Bayar University. I mostly build we
 
 <img src="https://raw.githubusercontent.com/yagizcngz/yagizcngz/main/github-metrics.svg" alt="GitHub activity and most used languages" />
 
-### Contact
-
-[yagizcengiz888@gmail.com](mailto:yagizcengiz888@gmail.com)
+<a href="mailto:yagizcengiz888@gmail.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
+    <img src="assets/footer-light.svg" width="100%" alt="Email: yagizcengiz888@gmail.com" />
+  </picture>
+</a>

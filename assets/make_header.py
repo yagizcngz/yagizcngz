@@ -265,3 +265,36 @@ def svg(name_fill, sub_fill, rule):
 for theme, colors in THEMES.items():
     with open(os.path.join(sys.argv[1], f'header-{theme}.svg'), 'w', encoding='utf-8') as f:
         f.write(svg(*colors))
+
+# footer: the slime carrying a letter next to the email address
+ENVELOPE = [
+    "kkkkkkkkkk",
+    "kWkHHHHkWk",
+    "kWHkHHkHWk",
+    "kWHHkRRHWk",
+    "kWWWWWWWWk",
+    "kkkkkkkkkk",
+]
+EMAIL = 'yagizcengiz888@gmail.com'
+mail = group('slime', at(ascii_grid(ENVELOPE), 2, 0), at(slime(), 1, 7))
+
+
+def footer(text_fill, rule):
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 90" width="880" height="90" role="img" aria-label="Email: {EMAIL}">
+  <style>
+    .mail {{ font: 400 18px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: {text_fill}; }}
+    .rule {{ stroke: {rule}; stroke-width: 1; }}
+    .slime {{ animation: hop 2.6s step-end infinite; }}
+    @keyframes hop {{ 0% {{ transform: translateY(0); }} 84% {{ transform: translateY(-4px); }} 92% {{ transform: translateY(0); }} }}
+    @media (prefers-reduced-motion: reduce) {{ .slime {{ animation: none; }} }}
+  </style>
+  <line class="rule" x1="0" y1="1" x2="880" y2="1" />
+  <g transform="translate(276 16)" shape-rendering="crispEdges">{mail}</g>
+  <text class="mail" x="344" y="66">{EMAIL}</text>
+</svg>
+'''
+
+
+for theme, (name_fill, _, rule) in THEMES.items():
+    with open(os.path.join(sys.argv[1], f'footer-{theme}.svg'), 'w', encoding='utf-8') as f:
+        f.write(footer(name_fill, rule))
